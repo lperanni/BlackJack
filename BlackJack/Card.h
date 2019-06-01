@@ -12,7 +12,8 @@ class Card
 public:
 	Card(int suit, int val, string name);
 	void cardImg();
-	~Card();
+	int getVal() { return this->value; };
+	void changeAceValue();
 
 private:
 		

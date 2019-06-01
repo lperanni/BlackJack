@@ -12,7 +12,7 @@ public:
 	Card* draw();
 	Deck();
 	void shuffle();
-	
+	~Deck();
 
 private:
 

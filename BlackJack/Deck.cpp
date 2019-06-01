@@ -1,6 +1,10 @@
 #include "Deck.h"
 #include <algorithm>
+#include "Card.h"
+#include <iostream>
 
+
+using namespace std;
 
 Deck::Deck() {
 
@@ -9,6 +13,7 @@ Deck::Deck() {
 		for (int j = 0; j < 13; j++) {
 
 			string tempName;
+
 
 			switch (j)
 			{
@@ -29,7 +34,14 @@ Deck::Deck() {
 				 break;
 			}
 
-			Card* tempCard = new Card(i, j + 1, tempName);
+			int val = ((j + 1) > 10) ? 10 : j + 1;
+			
+			if (tempName == "A") {
+				val = 11;
+			}
+			
+
+			Card* tempCard = new Card(i, val, tempName);
 
 			this->deck.push_back(tempCard);
 		}
@@ -41,7 +53,7 @@ Deck::Deck() {
 
 Card* Deck::draw() {
 
-	int randomIndex = (0 + (rand() % (int)(this->deck.size - 0 + 1)));
+	int randomIndex = (0 + (rand() % (int)(this->deck.size() - 0 + 1)));
 
 	Card* returnCard = this->deck[randomIndex];
 
@@ -59,4 +71,10 @@ void Deck::shuffle() {
 
 	random_shuffle(this->deck.begin(), this->deck.end());
 
+}
+
+Deck::~Deck() {
+
+	this->deck.clear();
+	cout << "Deck Destructor called" << endl;
 }

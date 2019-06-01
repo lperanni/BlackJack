@@ -41,9 +41,19 @@ void Card::cardImg() {
 	cout << "\t\t|"<<symbol<<"        |" << endl;
 	cout << "\t\t|         |" << endl;
 	cout << "\t\t|         |" << endl;
-	cout << "\t\t|        "<<value<<"|" << endl;
+	cout << "\t\t|        "<<name<<"|" << endl;
 	cout << "\t\t|        "<<symbol<<"|" << endl;
-	cout << "\t\t|_________|" << endl;
+	cout << "\t\t|_________|" << endl << endl << endl;
 
+
+}
+void Card::changeAceValue() {
+
+	if ((this->name == "A") && (this->value == 1)) {
+		this->value = 11;
+	}
+	if ((this->name == "A") && (this->value == 11)) {
+		this->value = 1;
+	}
 
 }
