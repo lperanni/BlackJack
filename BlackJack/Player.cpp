@@ -13,5 +13,4 @@ void Player::addToHand(Card newCard) {
 
 Player::~Player() {
 	this->hand.clear();
-	cout << "Player Destructor called" << endl;
 }

@@ -19,20 +19,21 @@ int main() {
 	while (choice == 1) {
 
 
+		cout << "\t\t\t\t\t=============================" << endl;
+		cout << "\t\t\t\t\t=         BLACKJACK         =" << endl;
+		cout << "\t\t\t\t\t=============================" << endl << endl << endl;
 
-		cout << "\t\t\t\t\t\tBLACKJACK" << endl << endl << endl;
+		cout << "\t\t\t\t\t        #############" << endl;
+		cout << "\t\t\t\t\t        ##         ##" << endl;
+		cout << "\t\t\t\t\t        #  ~~   ~~  #" << endl;
+		cout << "\t\t\t\t\t        #  ()   ()  #" << endl;
+		cout << "\t\t\t\t\t        (     ^     ) " << endl;
+		cout << "\t\t\t\t\t         |         | " << endl;
+		cout << "\t\t\t\t\t         |  {===}  | " << endl;
+		cout << "\t\t\t\t\t         \\         /  " << endl;
+		cout << "\t\t\t\t\t            -----    " << endl << endl;
 
-		cout << "\t\t\t\t\t   #############" << endl;
-		cout << "\t\t\t\t\t   ##         ##" << endl;
-		cout << "\t\t\t\t\t   #  ~~   ~~  #" << endl;
-		cout << "\t\t\t\t\t   #  ()   ()  #" << endl;
-		cout << "\t\t\t\t\t   (     ^     ) " << endl;
-		cout << "\t\t\t\t\t    |         | " << endl;
-		cout << "\t\t\t\t\t    |  {===}  | " << endl;
-		cout << "\t\t\t\t\t    \\         /  " << endl;
-		cout << "\t\t\t\t\t       -----    " << endl << endl;
-
-		cout << "I am your Dealer Today. My name is Luciano, pleased to meet you!" << endl << endl;
+		cout << "\t\t\tI am your Dealer Today. My name is Luciano, pleased to meet you!" << endl << endl << endl;
 
 
 		

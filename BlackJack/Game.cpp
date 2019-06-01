@@ -56,9 +56,6 @@ void Game::checkWinners() {
 		cout << "Dealer wins! " << endl;
 		return;
 	}
-	else if(master.getHandVal() > 21){
-		cout << "Dealer busts. All players win!" << endl;
-	}
 	else {
 		cout << "The winner is " << winner.getName() << " with " << winner.getHandVal() << " points!" << endl;
 		return;
@@ -70,6 +67,7 @@ void Game::checkWinners() {
 }
 
 void Game::play() {
+
 
 	while (!this->end) {
 		
@@ -94,18 +92,20 @@ void Game::play() {
 		cout << "Dealers Hand counts " << master.getHandVal() << endl;
 
 		if (master.getHandVal() > 21) {
+			cout << "Dealer busts. All players win!" << endl;
 			return;
 		}
 
 		for (int i = 0; i < this->playerCount; i++) {
 
 			bool choice = false;
+			char option;
 
 			if (!players[i].getHandVal() >= 21) {
 				continue;
 			}
 
-			cout << players[i].getName() << endl << "proceed with your Turn" << endl;
+			cout << players[i].getName() << " proceed with your Turn" << endl;
 
 			while (!choice) {
 
@@ -117,19 +117,40 @@ void Game::play() {
 				temp.cardImg();
 				players[i].addToHand(temp);
 
-				cout << "Current Hand Value is: " << players[i].getHandVal() << endl;
 				cout << "Dealer Hand value is: " << master.getHandVal() << endl;
+				for (int j = 0; j < this->playerCount; j++) {
+					cout << players[j].getName() << " Hand value is: " << players[j].getHandVal() << endl;
+				}
+
+				cout << players[i].getName() << "'s turn. Proceed." << endl;
 
 				if (players[i].getHandVal() > 21) {
 					players[i].win = false;
 					cout << players[i].getName() << " lost the game. You're busted!" << endl << endl;
-					i++;
 					break;
 				}
 
-				cout << "Do you want to continue drawing? (y/n) - ";
-				char option;
-				cin >> option;
+
+				while (true) {
+					
+					cout << "Do you want to continue drawing? (y/n) - ";
+					if (cin >> option) {
+						if (option == 'y' || option == 'n') {
+							break;
+						}
+						else {
+							cout << "Invalid input. Try again" << endl;
+							cin.clear();
+							cin.ignore(numeric_limits<streamsize>::max(), '\n');
+						}
+					}
+					else {
+						cout << "Invalid input. Try again" << endl;
+						cin.clear();
+						cin.ignore(numeric_limits<streamsize>::max(), '\n');
+					}
+				}
+				
 
 				switch (option)
 				{
@@ -159,5 +180,5 @@ void Game::play() {
 Game::~Game() {
 
 	this->players.clear();
-	cout << "Game Destructor called" << endl;
+	
 }

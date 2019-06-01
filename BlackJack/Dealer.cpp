@@ -11,5 +11,4 @@ void Dealer::addToHand(Card newCard) {
 
 Dealer::~Dealer() {
 	this->hand.clear();
-	cout << "Dealer Destructor called" << endl;
 }

@@ -35,6 +35,21 @@ Card::Card(int suit, int val, string name) {
 void Card::cardImg() {
 
 
+	if (this->name == "10") {
+		cout << "\t\t___________" << endl;
+		cout << "\t\t|10       |" << endl;
+		cout << "\t\t|" << symbol << "        |" << endl;
+		cout << "\t\t|         |" << endl;
+		cout << "\t\t|         |" << endl;
+		cout << "\t\t|       10|" << endl;
+		cout << "\t\t|        " << symbol << "|" << endl;
+		cout << "\t\t|_________|" << endl << endl << endl;
+
+		return;
+
+	}
+
+
 
 	cout << "\t\t___________" << endl;
 	cout << "\t\t|"<<name<<"        |" << endl;

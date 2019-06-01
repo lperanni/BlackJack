@@ -76,5 +76,5 @@ void Deck::shuffle() {
 Deck::~Deck() {
 
 	this->deck.clear();
-	cout << "Deck Destructor called" << endl;
+
 }

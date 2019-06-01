@@ -1,3 +1,3 @@
-﻿  main.cpp
-C:\Users\Emine\Documents\Visual Studio 2017\Projects\BlackJack\BlackJack\main.cpp(13,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+﻿  Game.cpp
+C:\Users\Emine\Documents\Visual Studio 2017\Projects\BlackJack\BlackJack\Game.cpp(104,38): warning C4804:  '>=': unsafe use of type 'bool' in operation
   BlackJack.vcxproj -> C:\Users\Emine\Documents\Visual Studio 2017\Projects\BlackJack\Debug\BlackJack.exe
